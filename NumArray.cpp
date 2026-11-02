@@ -23,3 +23,11 @@ void NumArray::setNum(int index, double value) {
 	}
 }
 
+double NumArray::getNum(int index) const {
+	if (index >= 0 && index < size) {
+		return data[index];
+	}
+	return SAFE;
+}
+
+
