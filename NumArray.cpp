@@ -56,3 +56,13 @@ double NumArray::getAverage() const {
 		return average;
 	}
 }
+
+void NumArray::print() const {
+	cout << "[";
+	for (int i = 0; i < size; i++) {
+		cout << data[i];
+		if (i < size - 1)
+			cout << ", ";
+	}
+	cout << "]" << endl;
+}
