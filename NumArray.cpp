@@ -30,4 +30,29 @@ double NumArray::getNum(int index) const {
 	return SAFE;
 }
 
+double NumArray::getMin() const {
+	double min = data[0];
+	for (int i = 1; i < size; i++) {
+		if (data[i] < min)
+			min = data[i];
+	}
+	return min;
+}
 
+double NumArray::getMax() const {
+	double max = data[0];
+	for (int i = 1; i < size; i++) {
+		if (data[i] > max)
+			max = data[i];
+	}
+	return max;
+}
+
+double NumArray::getAverage() const {
+	double sum = 0;
+	for (int i = 0; i < size; i++) {
+		sum += data[i];
+		double average = sum / size;
+		return average;
+	}
+}
