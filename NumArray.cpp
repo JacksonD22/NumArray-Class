@@ -4,7 +4,7 @@ using namespace std;
 
 const double NumArray::SAFE = 0;
 
-NumArray::NumArray(int size) {
+NumArray::NumArray(int size) { 
 	this->size = (size >= 1) ? size : MAXSIZE;
 	data = new double[this->size];
 	for (int i = 0; i < this->size; i++) {
@@ -12,7 +12,14 @@ NumArray::NumArray(int size) {
 	}
 }
 
-NumArray::~NumArray() {
+NumArray::~NumArray() { 
 	delete[] data;
 	data = nullptr;
 }
+
+void NumArray::setNum(int index, double value) {
+	if (index >= 0 && index < size) {
+		data[index] = value;
+	}
+}
+
