@@ -52,9 +52,8 @@ double NumArray::getAverage() const {
 	double sum = 0;
 	for (int i = 0; i < size; i++) {
 		sum += data[i];
-		double average = sum / size;
-		return average;
 	}
+	return sum / size;
 }
 
 void NumArray::print() const {
